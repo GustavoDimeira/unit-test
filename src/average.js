@@ -10,8 +10,25 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
+    mudança para fazer o commit
 */
-
-const average = () => {};
+const average = (valores) => {
+  if (valores.length === 0) {
+    return(undefined);
+  } else {
+    for (let x = 0; x < valores.length; x += 1) {
+      if (typeof valores[x] !== typeof 1) {
+        return(undefined);
+      }
+    }
+  }
+  let soma = 0;
+  for (let x = 0; x < valores.length; x += 1) {
+    soma = soma+valores[x];
+  }
+  let resultado = soma/valores.length;
+  let x = Math.round(resultado);
+  return(x);
+};
 
 module.exports = average;
