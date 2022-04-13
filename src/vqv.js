@@ -19,13 +19,14 @@
 const vqv = (nome, idade) => {
   if (nome === undefined) {
     return (undefined);
-  } else if (idade === undefined) {
+  }
+  if (idade === undefined) {
     return (undefined);
   }
   const retornar = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!`
+#VQV!`;
   return (retornar);
 };
 
