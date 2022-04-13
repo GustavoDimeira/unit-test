@@ -14,21 +14,20 @@
 */
 const average = (valores) => {
   if (valores.length === 0) {
-    return(undefined);
-  } else {
-    for (let x = 0; x < valores.length; x += 1) {
-      if (typeof valores[x] !== typeof 1) {
-        return(undefined);
-      }
+    return (undefined);
+  }
+  for (let x = 0; x < valores.length; x += 1) {
+    if (typeof valores[x] !== typeof 1) {
+      return (undefined);
     }
   }
   let soma = 0;
   for (let x = 0; x < valores.length; x += 1) {
-    soma = soma+valores[x];
+    soma += valores[x];
   }
-  let resultado = soma/valores.length;
+  let resultado = soma / valores.length;
   let x = Math.round(resultado);
-  return(x);
+  return (x);
 };
 
 module.exports = average;
