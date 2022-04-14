@@ -43,7 +43,6 @@ Retorno:
 
 describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
   it('Verifica se a função `getCharacter` retorna o objeto do personagem corretamente.', () => {
-    fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     // Teste se a função retorna o objeto correto para o parâmetro 'Arya',
@@ -51,5 +50,11 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     // Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
     // Teste se os parâmetros não são Case Sensitive.
     // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
+    expect (getCharacter()).toBe(undefined);
+    expect (Object.values(getCharacter('arya'))[0]).toBe('Arya Stark');
+    expect (Object.values(getCharacter('brienne'))[0]).toBe('Brienne Tarth');
+    expect (Object.values(getCharacter('melissandre'))[0]).toBe('Melissandre');
+    expect (getCharacter('arya') === getCharacter('ARYA')).toBe(true);
+    expect (getCharacter('a')).toBe(undefined);
   });
 });
