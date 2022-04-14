@@ -39,7 +39,4 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-const valor = productDetails('a', 'b')[0].details.productId;
-console.log(valor[valor.length-3]+valor[valor.length-2]+valor[valor.length-1]);
-
 module.exports = productDetails;
