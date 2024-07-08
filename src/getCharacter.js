@@ -68,7 +68,4 @@ const getCharacter = (name) => {
   return undefined;
 };
 
-console.log(getCharacter('arya'));
-console.log(Object.values(getCharacter('arya'))[0] === 'Arya Stark');
-
 module.exports = getCharacter;

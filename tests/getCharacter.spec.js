@@ -55,6 +55,6 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     expect (Object.values(getCharacter('brienne'))[0]).toBe('Brienne Tarth');
     expect (Object.values(getCharacter('melissandre'))[0]).toBe('Melissandre');
     expect (getCharacter('arya') === getCharacter('ARYA')).toBe(true);
-    expect (getCharacter('a')).toBe(undefined);
+    expect (getCharacter(' ')).toBe(undefined);
   });
 });
